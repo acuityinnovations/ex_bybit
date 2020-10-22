@@ -27,24 +27,8 @@ defmodule Bybit.Api do
         ) :: response
   def parse_response(response) do
     case response do
-      {:ok, %HTTPoison.Response{body: body, status_code: status_code}} ->
-        if status_code in 200..299 do
-          {:ok, Jason.decode!(body)}
-        else
-          case Jason.decode(body) do
-            {:ok, %{"code" => code, "message" => message}} ->
-              {:error, {code, message}, status_code}
-
-            {:ok, %{"error_code" => code, "error_message" => message}} ->
-              {:error, {code, message}, status_code}
-
-            {:ok, %{"message" => message, "error_message" => error_message}} ->
-              {:error, {message, error_message}, status_code}
-
-            {:error, _} ->
-              {:error, body, status_code}
-          end
-        end
+      {:ok, %HTTPoison.Response{body: body, status_code: _status_code}} ->
+        {:ok, Jason.decode!(body)}
 
       {:error, %HTTPoison.Error{reason: reason}} ->
         {:error, reason}

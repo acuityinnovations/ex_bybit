@@ -1,4 +1,4 @@
-# ExBybit
+# Bybit
 
 **TODO: Add description**
 

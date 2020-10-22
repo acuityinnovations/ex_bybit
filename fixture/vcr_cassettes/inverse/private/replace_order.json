@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "{\"api_key\":\"tRvzaYymQtZIOJay9T\",\"order_id\":\"45739859-072f-47f5-8925-45f35d5ff781\",\"p_r_qty\":11,\"sign\":\"770F926BDCFF0A10A4DBB61CC8CF76B298788EC4B5667E194DF1CC8F682531DA\",\"symbol\":\"BTCUSD\",\"timestamp\":1603355715139}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.bybit.com/open-api/order/replace"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"ret_code\":0,\"ret_msg\":\"ok\",\"ext_code\":\"\",\"result\":{\"order_id\":\"45739859-072f-47f5-8925-45f35d5ff781\"},\"ext_info\":null,\"time_now\":\"1603355715.349582\",\"rate_limit_status\":98,\"rate_limit_reset_ms\":1603355715359,\"rate_limit\":100}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Server": "nginx",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": "false",
+        "Expires": "Thu, 22 Oct 2020 08:35:15 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Thu, 22 Oct 2020 08:35:15 GMT",
+        "Content-Length": "227",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

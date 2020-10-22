@@ -1,0 +1,29 @@
+[
+  {
+    "request": {
+      "body": "{\"api_key\":\"tRvzaYymQtZIOJay9T\",\"order_id\":\"45739859-072f-47f5-8925-45f35d5ff781\",\"sign\":\"1F91D2B04B1B03B4040FD2837585EE0BCBC87C8F7163B2F41DA152B9D3516527\",\"symbol\":\"BTCUSD\",\"timestamp\":1603355886378}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.bybit.com/v2/private/order/cancel"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"ret_code\":0,\"ret_msg\":\"OK\",\"ext_code\":\"\",\"ext_info\":\"\",\"result\":{\"user_id\":1911583,\"order_id\":\"45739859-072f-47f5-8925-45f35d5ff781\",\"symbol\":\"BTCUSD\",\"side\":\"Buy\",\"order_type\":\"Limit\",\"price\":11000,\"qty\":11,\"time_in_force\":\"PostOnly\",\"order_status\":\"New\",\"last_exec_time\":0,\"last_exec_price\":0,\"leaves_qty\":11,\"cum_exec_qty\":0,\"cum_exec_value\":0,\"cum_exec_fee\":0,\"reject_reason\":\"EC_NoError\",\"order_link_id\":\"\",\"created_at\":\"2020-10-22T08:30:17.366Z\",\"updated_at\":\"2020-10-22T08:38:06.564Z\"},\"time_now\":\"1603355886.564473\",\"rate_limit_status\":99,\"rate_limit_reset_ms\":1603355886563,\"rate_limit\":100}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "602",
+        "Expires": "Thu, 22 Oct 2020 08:38:06 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Thu, 22 Oct 2020 08:38:06 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

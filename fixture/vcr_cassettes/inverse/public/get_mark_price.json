@@ -1,0 +1,29 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.bybit.com/v2/public/tickers?symbol=BTCUSD"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"ret_code\":0,\"ret_msg\":\"OK\",\"ext_code\":\"\",\"ext_info\":\"\",\"result\":[{\"symbol\":\"BTCUSD\",\"bid_price\":\"12744.5\",\"ask_price\":\"12745\",\"last_price\":\"12744.50\",\"last_tick_direction\":\"ZeroMinusTick\",\"prev_price_24h\":\"12197.50\",\"price_24h_pcnt\":\"0.044845\",\"high_price_24h\":\"13250.00\",\"low_price_24h\":\"12127.00\",\"prev_price_1h\":\"12835.00\",\"price_1h_pcnt\":\"-0.007051\",\"mark_price\":\"12741.09\",\"index_price\":\"12740.91\",\"open_interest\":479998596,\"open_value\":\"14616.80\",\"total_turnover\":\"47945832.15\",\"turnover_24h\":\"196696.27\",\"total_volume\":426115011948,\"volume_24h\":2499111540,\"funding_rate\":\"0.0001\",\"predicted_funding_rate\":\"0.0001\",\"next_funding_time\":\"2020-10-22T08:00:00Z\",\"countdown_hour\":1}],\"time_now\":\"1603353138.269627\"}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "718",
+        "Expires": "Thu, 22 Oct 2020 07:52:18 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Thu, 22 Oct 2020 07:52:18 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

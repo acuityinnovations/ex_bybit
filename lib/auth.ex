@@ -11,7 +11,7 @@ defmodule Bybit.Auth do
       body
       |> Map.put(:api_key, api_key)
       |> Map.put(:timestamp, timestamp)
-      |> Enum.reduce(%{}, fn({k, v}, acc) -> Map.put(acc, k, v) end )
+      |> Enum.reduce(%{}, fn {k, v}, acc -> Map.put(acc, k, v) end)
       |> URI.encode_query()
 
     :sha256
