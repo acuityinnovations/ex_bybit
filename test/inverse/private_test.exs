@@ -56,21 +56,19 @@ defmodule Bybit.Inverse.PrivateTest do
       {:ok,
        %{
          "ext_code" => "",
-         "ext_info" => nil,
+         "ext_info" => "",
          "rate_limit" => 100,
-         "rate_limit_reset_ms" => 1_603_355_715_359,
-         "rate_limit_status" => 98,
-         "result" => %{
-           "order_id" => "45739859-072f-47f5-8925-45f35d5ff781"
-         },
+         "rate_limit_reset_ms" => 1_608_044_504_237,
+         "rate_limit_status" => 99,
+         "result" => %{"order_id" => "1c5dc1aa-729f-4b34-93e4-23f6a2f6da78"},
          "ret_code" => 0,
-         "ret_msg" => "ok",
-         "time_now" => "1603355715.349582"
+         "ret_msg" => "OK",
+         "time_now" => "1608044504.238969"
        }} =
         Bybit.Inverse.Private.replace_order(%{
           symbol: "BTCUSD",
-          order_id: "45739859-072f-47f5-8925-45f35d5ff781",
-          p_r_qty: 11
+          order_id: "1c5dc1aa-729f-4b34-93e4-23f6a2f6da78",
+          p_r_qty: 99
         })
     end
   end

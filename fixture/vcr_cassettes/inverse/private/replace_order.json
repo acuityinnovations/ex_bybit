@@ -1,28 +1,25 @@
 [
   {
     "request": {
-      "body": "{\"api_key\":\"tRvzaYymQtZIOJay9T\",\"order_id\":\"45739859-072f-47f5-8925-45f35d5ff781\",\"p_r_qty\":11,\"sign\":\"770F926BDCFF0A10A4DBB61CC8CF76B298788EC4B5667E194DF1CC8F682531DA\",\"symbol\":\"BTCUSD\",\"timestamp\":1603355715139}",
+      "body": "{\"api_key\":\"tRvzaYymQtZIOJay9T\",\"order_id\":\"1c5dc1aa-729f-4b34-93e4-23f6a2f6da78\",\"p_r_qty\":99,\"sign\":\"3C26614C191F3C313439656622495FA491AEB5F5DEA19A24A17FF815F2D0B113\",\"symbol\":\"BTCUSD\",\"timestamp\":1608044503713}",
       "headers": {
         "Content-Type": "application/json"
       },
       "method": "post",
       "options": [],
       "request_body": "",
-      "url": "https://api.bybit.com/open-api/order/replace"
+      "url": "https://api.bybit.com/v2/private/order/replace"
     },
     "response": {
       "binary": false,
-      "body": "{\"ret_code\":0,\"ret_msg\":\"ok\",\"ext_code\":\"\",\"result\":{\"order_id\":\"45739859-072f-47f5-8925-45f35d5ff781\"},\"ext_info\":null,\"time_now\":\"1603355715.349582\",\"rate_limit_status\":98,\"rate_limit_reset_ms\":1603355715359,\"rate_limit\":100}",
+      "body": "{\"ret_code\":0,\"ret_msg\":\"OK\",\"ext_code\":\"\",\"ext_info\":\"\",\"result\":{\"order_id\":\"1c5dc1aa-729f-4b34-93e4-23f6a2f6da78\"},\"time_now\":\"1608044504.238969\",\"rate_limit_status\":99,\"rate_limit_reset_ms\":1608044504237,\"rate_limit\":100}",
       "headers": {
-        "Content-Type": "application/json",
-        "Server": "nginx",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": "false",
-        "Expires": "Thu, 22 Oct 2020 08:35:15 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "225",
+        "Expires": "Tue, 15 Dec 2020 15:01:44 GMT",
         "Cache-Control": "max-age=0, no-cache, no-store",
         "Pragma": "no-cache",
-        "Date": "Thu, 22 Oct 2020 08:35:15 GMT",
-        "Content-Length": "227",
+        "Date": "Tue, 15 Dec 2020 15:01:44 GMT",
         "Connection": "keep-alive"
       },
       "status_code": 200,

@@ -10,7 +10,7 @@ by adding `bybit` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:bybit, "~> 0.1.0"}
+    {:bybit, "~> 0.1.1"}
   ]
 end
 ```

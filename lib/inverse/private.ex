@@ -62,6 +62,11 @@ defmodule Bybit.Inverse.Private do
     post("#{@prefix}/order/create", params, config)
   end
 
+  @spec create_order_v1(params, config) :: response
+  def create_order_v1(params, config \\ nil) do
+    post("/open-api/order/create", params, config)
+  end
+
   @doc """
   Bybit.Inverse.Private.get_open_orders(%{symbol: "BTCUSD", order_status: "New"})
 
@@ -115,6 +120,10 @@ defmodule Bybit.Inverse.Private do
     get("/open-api/order/list", params, config)
   end
 
+  def query_order(params, config \\ nil) do
+    get("/v2/private/order", params, config)
+  end
+
   @doc """
   Cancel an order
   Bybit.Inverse.Private.cancel_order(%{symbol: "BTCUSD", order_id: "9fc29a28-50a4-497c-a9a3-17e7d9a54fa5"})
@@ -157,9 +166,13 @@ defmodule Bybit.Inverse.Private do
     post("#{@prefix}/order/cancel", params, config)
   end
 
+  def cancel_order_v1(params, config \\ nil) do
+    post("/open-api/order/cancel", params, config)
+  end
+
   @doc """
   amend an order
-  Bybit.Inverse.Private.replace_order(%{symbol: "BTCUSD", order_link_id: "1234a", p_r_qty: 11})
+  Bybit.Inverse.Private.replace_order(%{symbol: "BTCUSD", order_id: "1c5dc1aa-729f-4b34-93e4-23f6a2f6da78", p_r_qty: 99})
 
   {:ok,
    %{
@@ -175,7 +188,7 @@ defmodule Bybit.Inverse.Private do
    }}
   """
   def replace_order(params, config \\ nil) do
-    post("/open-api/order/replace", params, config)
+    post("#{@prefix}/order/replace", params, config)
   end
 
   @doc """
