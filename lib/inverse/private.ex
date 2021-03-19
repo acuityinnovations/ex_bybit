@@ -232,4 +232,125 @@ defmodule Bybit.Inverse.Private do
   def cancel_all_orders(params, config \\ nil) do
     post("#{@prefix}/order/cancelAll", params, config)
   end
+
+  @doc """
+  Get wallet balance
+
+  Examples:
+
+  - Get wallet balance of a coin:
+    Bybit.Inverse.Private.get_account(%{coin: "BTC"}, config)
+
+  - Get wallet balance of every coins:
+    Bybit.Inverse.Private.get_account(%{}, config)
+
+  {:ok,
+   %{
+    "ext_code" => "",
+    "ext_info" => "",
+    "rate_limit" => 120,
+    "rate_limit_reset_ms" => 1616145759482,
+    "rate_limit_status" => 119,
+    "result" => %{
+      "BTC" => %{
+        "available_balance" => 0.00485977,
+        "cum_realised_pnl" => -5.2033e-4,
+        "equity" => 0.0048741,
+        "given_cash" => 0,
+        "occ_closing_fee" => 4.3e-6,
+        "occ_funding_fee" => 0,
+        "order_margin" => 0,
+        "position_margin" => 0.00486471,
+        "realised_pnl" => -6.6e-7,
+        "service_cash" => 0,
+        "unrealised_pnl" => 5.09e-6,
+        "used_margin" => 9.24e-6,
+        "wallet_balance" => 0.00486901
+      },
+      "ETH" => %{
+        "available_balance" => 0,
+        "cum_realised_pnl" => 0,
+        "equity" => 0,
+        "given_cash" => 0,
+        "occ_closing_fee" => 0,
+        "occ_funding_fee" => 0,
+        "order_margin" => 0,
+        "position_margin" => 0,
+        "realised_pnl" => 0,
+        "service_cash" => 0,
+        "unrealised_pnl" => 0,
+        "used_margin" => 0,
+        "wallet_balance" => 0
+      }
+    }
+  }
+  """
+  def get_account(params, config \\ nil) do
+    get("#{@prefix}/wallet/balance", params, config)
+  end
+
+  @doc """
+  Get positions data
+
+  Examples:
+
+  - Get positions of a symbol:
+    Bybit.Inverse.Private.get_position(%{symbol: "BTCUSD"}, config)
+
+  - Get positions of every symbols:
+    Bybit.Inverse.Private.get_account(%{}, config)
+
+  {:ok,
+   %{
+     "ext_code" => "",
+     "ext_info" => "",
+     "rate_limit" => 120,
+     "rate_limit_reset_ms" => 1616147246834,
+     "rate_limit_status" => 118,
+     "result" => [
+        %{
+          "data" => %{
+          "bust_price" => "53235.5",
+          "auto_add_margin" => 0,
+          "side" => "Buy",
+          "effective_leverage" => "10",
+          "is_isolated" => true,
+          "occ_closing_fee" => "0.00000029",
+          "entry_price" => "58558.29478246",
+          "position_status" => "Normal",
+          "cross_seq" => 444081383,
+          "id" => 0,
+          "take_profit" => "0",
+          "unrealised_pnl" => -1.02e-6,
+          "user_id" => 1946832,
+          "position_margin" => "0.00003444",
+          "position_idx" => 0,
+          "cum_realised_pnl" => "-0.00051731",
+          "liq_price" => "53479",
+          "created_at" => "2020-10-26T06:27:41Z",
+          "position_seq" = 287141589,
+          "deleverage_indicator" => 2,
+          "occ_funding_fee" => "0",
+          "trailing_stop" => "0",
+          "risk_id" => 1,
+          "symbol" => "BTCUSD",
+          "wallet_balance" => "0.00487203",
+          "oc_calc_data" => "{\"blq\":2,\"blv\":\"0.0002941\",\"slq\":0,\"bmp\":6800.408,\"smp\":0,\"fq\":-5,\"fc\":-0.00029477,\"bv2c\":1.00225,\"sv2c\":1.0007575}",
+          "stop_loss" => "0",
+          "leverage" => "10",
+          "position_value" => "0.00034154",
+          "size" => 20,
+          "order_margin" => "0",
+          "mode" => 0,
+          "realised_pnl" => "0.00000236",
+          "updated_at" => "2021-03-19T09:39:26.749076173Z"
+          },
+          "is_valid" => true
+        }
+      ]
+    }
+  """
+  def get_position(params, config \\ nil) do
+    get("#{@prefix}/position/list", params, config)
+  end
 end
