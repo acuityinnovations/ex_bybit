@@ -14,8 +14,8 @@ defmodule Bybit.Auth do
       |> Enum.reduce(%{}, fn {k, v}, acc -> Map.put(acc, k, v) end)
       |> URI.encode_query()
 
-    :sha256
-    |> :crypto.hmac(api_secret, payload_to_sign)
+    :hmac
+    |> :crypto.mac(:sha256, api_secret, payload_to_sign)
     |> Base.encode16()
   end
 end
