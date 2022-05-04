@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 config :bybit,
   api_key: System.get_env("BYBIT_API_KEY"),
