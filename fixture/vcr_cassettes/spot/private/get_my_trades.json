@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/spot/v3/private/my-trades?api_key=zyRsbV5SUmFForZck6&sign=D94ABB7885F40961E005986BBA672306F45086169B93CD57AA535E9FE26BEF79&symbol=ETHUSDT&timestamp=1670905793121"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"list\":[{\"symbol\":\"ETHUSDT\",\"id\":\"1309421403436492800\",\"orderId\":\"1309421403277109248\",\"tradeId\":\"2110000000001016835\",\"orderPrice\":\"315.75\",\"orderQty\":\"0.001\",\"execFee\":\"0\",\"feeTokenId\":\"ETH\",\"creatTime\":\"1670831195214\",\"isBuyer\":\"0\",\"isMaker\":\"1\",\"matchOrderId\":\"1309412011492255744\",\"makerRebate\":\"0\",\"executionTime\":\"1670831195226\"}]},\"retExtInfo\":{},\"time\":1670905794085}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "413",
+        "X-Bapi-Limit": "20",
+        "X-Bapi-Limit-Status": "19",
+        "X-Bapi-Limit-Reset-Timestamp": "1670905794074",
+        "Ret_code": "0",
+        "Traceid": "aacd4f84a59f220d9ddb09df6cab9ba7",
+        "Timenow": "1670905794085",
+        "Server": "Openresty",
+        "Expires": "Tue, 13 Dec 2022 04:29:54 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Tue, 13 Dec 2022 04:29:54 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

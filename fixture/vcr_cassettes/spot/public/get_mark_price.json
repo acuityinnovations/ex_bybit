@@ -1,0 +1,30 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/spot/v3/public/quote/ticker/price?symbol=BTCUSDT"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"symbol\":\"BTCUSDT\",\"price\":\"16929\"},\"retExtInfo\":{},\"time\":1670905949584}\n",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "111",
+        "Server": "Openresty",
+        "Expires": "Tue, 13 Dec 2022 04:32:29 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Tue, 13 Dec 2022 04:32:29 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

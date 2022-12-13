@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "{\"api_key\":\"zyRsbV5SUmFForZck6\",\"sign\":\"F34833067681FBDBD07D5CEA974944DF159BC04D75D8786EC2FE627B4FD93879\",\"symbol\":\"ETHUSDT\",\"timestamp\":1670903499485}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/spot/v3/private/cancel-orders"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"success\":\"1\"},\"retExtInfo\":{},\"time\":1670903499981}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "89",
+        "X-Bapi-Limit": "20",
+        "X-Bapi-Limit-Status": "19",
+        "X-Bapi-Limit-Reset-Timestamp": "1670903499973",
+        "Ret_code": "0",
+        "Traceid": "9c376a1599540296913a370daf4e6a10",
+        "Timenow": "1670903499981",
+        "Server": "Openresty",
+        "Expires": "Tue, 13 Dec 2022 03:51:40 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Tue, 13 Dec 2022 03:51:40 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

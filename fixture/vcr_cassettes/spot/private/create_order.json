@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "{\"api_key\":\"zyRsbV5SUmFForZck6\",\"orderLinkId\":\"W5j58TYzdW\",\"orderPrice\":\"292\",\"orderQty\":\"0.001\",\"orderType\":\"LIMIT\",\"side\":\"Buy\",\"sign\":\"FE8B6A1F01441583AD0F5340D694BEE323B47CA2227F89B3013508307F16010B\",\"symbol\":\"ETHUSDT\",\"timeInForce\":\"GTC\",\"timestamp\":1670903320620}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/spot/v3/private/order"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"orderId\":\"1310026436687486208\",\"orderLinkId\":\"W5j58TYzdW\",\"symbol\":\"ETHUSDT\",\"createTime\":\"1670903320810\",\"orderPrice\":\"292\",\"orderQty\":\"0.001\",\"orderType\":\"LIMIT\",\"side\":\"BUY\",\"status\":\"NEW\",\"timeInForce\":\"GTC\",\"accountId\":\"1107450\",\"execQty\":\"0\",\"orderCategory\":0},\"retExtInfo\":{},\"time\":1670903320818}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "342",
+        "X-Bapi-Limit": "20",
+        "X-Bapi-Limit-Status": "19",
+        "X-Bapi-Limit-Reset-Timestamp": "1670903320804",
+        "Ret_code": "0",
+        "Traceid": "bee8e88b32bbc696915d17972b4b3be0",
+        "Timenow": "1670903320818",
+        "Server": "Openresty",
+        "Expires": "Tue, 13 Dec 2022 03:48:40 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Tue, 13 Dec 2022 03:48:40 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
