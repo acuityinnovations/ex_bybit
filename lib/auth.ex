@@ -5,15 +5,21 @@ defmodule Bybit.Auth do
     :os.system_time(:millisecond)
   end
 
-  @spec sign(String.t(), map | [map], String.t(), String.t()) :: String.t()
-  def sign(timestamp, body, api_key, api_secret) do
-    payload_to_sign =
-      body
-      |> Map.put(:api_key, api_key)
-      |> Map.put(:timestamp, timestamp)
-      |> Enum.reduce(%{}, fn {k, v}, acc -> Map.put(acc, k, v) end)
-      |> URI.encode_query()
+  def post_sign(timestamp, body, api_key, api_secret) do
+    payload_to_sign = "#{timestamp}#{api_key}5000#{Jason.encode!(body)}"
+    if Code.ensure_loaded?(:crypto) and function_exported?(:crypto, :mac, 4) do
+      :hmac
+      |> :crypto.mac(:sha256, api_secret, payload_to_sign)
+      |> Base.encode16()
+    else
+      :sha256
+      |> :crypto.hmac(api_secret, payload_to_sign)
+      |> Base.encode16()
+    end
+  end
 
+  def get_sign(timestamp, params, api_key, api_secret) do
+    payload_to_sign = "#{timestamp}#{api_key}5000#{params|> URI.encode_query()}"
     if Code.ensure_loaded?(:crypto) and function_exported?(:crypto, :mac, 4) do
       :hmac
       |> :crypto.mac(:sha256, api_secret, payload_to_sign)

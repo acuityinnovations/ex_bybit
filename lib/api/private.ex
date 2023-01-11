@@ -14,62 +14,46 @@ defmodule Bybit.Api.Private do
 
   @spec get(path, params, config) :: response
   def get(path, params \\ %{}, config \\ nil) do
+    timestamp = Auth.timestamp()
     config = Config.config_or_env_config(config)
-    qs = prepare_query_string(path, params, config)
+    signed = Auth.get_sign(timestamp, params, config.api_key, config.api_secret)
+    qs = prepare_query_string(path, params)
 
     qs
     |> url(config)
-    |> HTTPoison.get(headers())
+    |> HTTPoison.get(headers(timestamp, signed, config))
     |> parse_response()
   end
 
   @spec post(path, params, config) :: response
   def post(path, params \\ %{}, config \\ nil) do
+    timestamp = Auth.timestamp()
     config = Config.config_or_env_config(config)
-    payload = prepare_payload(params, config)
+    signed = Auth.post_sign(timestamp, params, config.api_key, config.api_secret)
+    payload = prepare_payload(params)
 
     path
     |> url(config)
-    |> HTTPoison.post(payload, headers())
+    |> HTTPoison.post(payload, headers(timestamp, signed, config))
     |> parse_response()
   end
 
-  @spec delete(path, config) :: response
-  def delete(path, config \\ nil) do
-    config = Config.config_or_env_config(config)
-
-    path
-    |> url(config)
-    |> HTTPoison.delete(headers())
-    |> parse_response()
+  defp prepare_query_string(path, params) do
+    query_string(path, params)
   end
 
-  defp prepare_query_string(path, params, config) do
-    timestamp = Auth.timestamp()
-    signed = Auth.sign(timestamp, params, config.api_key, config.api_secret)
-
-    updated_params =
-      params
-      |> Map.put(:api_key, config.api_key)
-      |> Map.put(:timestamp, timestamp)
-      |> Map.put(:sign, signed)
-
-    query_string(path, updated_params)
-  end
-
-  defp prepare_payload(body, config) do
-    timestamp = Auth.timestamp()
-    signed = Auth.sign(timestamp, body, config.api_key, config.api_secret)
-
+  defp prepare_payload(body) do
     body
-    |> Map.put(:api_key, config.api_key)
-    |> Map.put(:timestamp, timestamp)
-    |> Map.put(:sign, signed)
     |> Jason.encode!()
   end
 
-  defp headers() do
+  defp headers(timestamp, signed, config) do
     [
+      "X-BAPI-SIGN-TYPE": 2,
+      "X-BAPI-SIGN": signed,
+      "X-BAPI-API-KEY": config.api_key,
+      "X-BAPI-TIMESTAMP": timestamp,
+      "X-BAPI-RECV-WINDOW": 5000,
       "Content-Type": "application/json"
     ]
   end
