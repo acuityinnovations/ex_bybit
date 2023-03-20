@@ -37,8 +37,8 @@ defmodule Bybit.Unified.PrivateTest do
          "retCode" => 0,
          "retMsg" => "OK",
          "result" => %{
-            "orderId"=> order_id,
-            "orderLinkId"=> _order_link_id
+           "orderId" => order_id,
+           "orderLinkId" => _order_link_id
          }
        }} =
         Bybit.Unified.Private.create_order(%{
@@ -50,18 +50,19 @@ defmodule Bybit.Unified.PrivateTest do
           timeInForce: "GoodTillCancel",
           category: "linear"
         })
-        {:ok,
-        %{
-          "retCode" => 0,
-          "retMsg" => "OK",
-          "result" => _
-        }} =
-         Bybit.Unified.Private.replace_order(%{
-            orderId: order_id,
-            symbol: "BTCUSDT",
-            price: "17001",
-            category: "linear"
-         })
+
+      {:ok,
+       %{
+         "retCode" => 0,
+         "retMsg" => "OK",
+         "result" => _
+       }} =
+        Bybit.Unified.Private.replace_order(%{
+          orderId: order_id,
+          symbol: "BTCUSDT",
+          price: "17001",
+          category: "linear"
+        })
     end
   end
 
@@ -85,7 +86,7 @@ defmodule Bybit.Unified.PrivateTest do
          "retCode" => 0,
          "retMsg" => "OK",
          "result" => %{
-          "category"=> "linear",
+           "category" => "linear",
            "list" => _
          }
        }} = Bybit.Unified.Private.get_open_orders(%{category: "linear"})
@@ -128,15 +129,17 @@ defmodule Bybit.Unified.PrivateTest do
 
   test "cancel all open order" do
     use_cassette "unified/private/cancel_all_orders" do
-      _ = Bybit.Unified.Private.create_order(%{
-        symbol: "BTCUSDT",
-        orderType: "Limit",
-        side: "Buy",
-        qty: "0.01",
-        price: "17000",
-        timeInForce: "GoodTillCancel",
-        category: "linear"
-      })
+      _ =
+        Bybit.Unified.Private.create_order(%{
+          symbol: "BTCUSDT",
+          orderType: "Limit",
+          side: "Buy",
+          qty: "0.01",
+          price: "17000",
+          timeInForce: "GoodTillCancel",
+          category: "linear"
+        })
+
       {:ok,
        %{
          "retCode" => 0,
@@ -150,9 +153,9 @@ defmodule Bybit.Unified.PrivateTest do
     use_cassette "unified/private/get_account" do
       {:ok,
        %{
-        "retCode"=> 0,
-        "retMsg"=> "OK",
-        "result"=> _
+         "retCode" => 0,
+         "retMsg" => "OK",
+         "result" => _
        }} = Bybit.Unified.Private.get_account()
     end
   end

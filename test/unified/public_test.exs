@@ -22,8 +22,8 @@ defmodule Bybit.Spot.PublicTest do
       {:ok,
        %{
          "result" => %{
-          "category"=>"linear",
-          "list"=> _
+           "category" => "linear",
+           "list" => _
          },
          "retCode" => 0,
          "retMsg" => "OK"

@@ -9,7 +9,7 @@ defmodule Bybit.Unified.Private do
   @type config :: map | nil
   @type response :: Bybit.Api.response()
 
-  @prefix "/unified/v3/private"
+  @prefix "/v5"
 
   @doc """
   Place a new order.
@@ -22,7 +22,6 @@ defmodule Bybit.Unified.Private do
     "side": "Buy",
     "qty": "0.01",
     "price": "20002",
-    "timeInForce": "GoodTillCancel",
     "category": "linear"
   })
   {:ok,
@@ -88,7 +87,7 @@ defmodule Bybit.Unified.Private do
   }}
   """
   def get_open_orders(params, config \\ nil) do
-    get("#{@prefix}/order/unfilled-orders", params, config)
+    get("#{@prefix}/order/realtime", params, config)
   end
 
   @doc """
@@ -107,7 +106,7 @@ defmodule Bybit.Unified.Private do
 
   """
   def replace_order(params, config \\ nil) do
-    post("#{@prefix}/order/cancel", params, config)
+    post("#{@prefix}/order/amend", params, config)
   end
 
   @doc """
@@ -235,7 +234,7 @@ defmodule Bybit.Unified.Private do
   }}
   """
   def get_account() do
-    get("#{@prefix}/account/wallet/balance")
+    get("#{@prefix}/account/wallet-balance")
   end
 
   @doc """
@@ -248,7 +247,7 @@ defmodule Bybit.Unified.Private do
   {:ok,
   %{
     "retCode"=> 0,
-    "retMsg"=> "Success",
+    "retMsg"=> "OK",
     "result"=> {
         "nextPageCursor"=> "0%3A1657711949945%2C0%3A1657711949945",
         "category"=> "linear",

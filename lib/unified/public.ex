@@ -2,11 +2,8 @@ defmodule Bybit.Unified.Public do
   @moduledoc false
   import Bybit.Api.Public
 
-  @prefix "/derivatives/v3/public"
+  @prefix "/v5"
 
-  def server_time do
-    get("/v3/public/time", %{})
-  end
   def instruments do
     get("#{@prefix}/instruments-info", %{})
   end
