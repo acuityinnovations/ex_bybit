@@ -1,4 +1,4 @@
-defmodule Bybit.Spot.PublicTest do
+defmodule Bybit.V5.PublicTest do
   use ExUnit.Case
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
@@ -7,18 +7,18 @@ defmodule Bybit.Spot.PublicTest do
   end
 
   test "ping returns an empty map" do
-    use_cassette "unified/public/instruments-info" do
+    use_cassette "v5/public/instruments-info" do
       {:ok,
        %{
          "result" => %{
            "list" => _
          }
-       }} = Bybit.Unified.Public.instruments()
+       }} = Bybit.V5.Public.instruments()
     end
   end
 
   test "get mark price" do
-    use_cassette "unified/public/get_mark_price" do
+    use_cassette "v5/public/get_mark_price" do
       {:ok,
        %{
          "result" => %{
@@ -27,7 +27,7 @@ defmodule Bybit.Spot.PublicTest do
          },
          "retCode" => 0,
          "retMsg" => "OK"
-       }} = Bybit.Unified.Public.get_mark_price("BTCUSDT")
+       }} = Bybit.V5.Public.get_mark_price("BTCUSDT")
     end
   end
 end

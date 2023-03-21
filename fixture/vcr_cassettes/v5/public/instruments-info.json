@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/v5/market/instruments-info"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":10001,\"retMsg\":\"Illegal category\",\"result\":{\"category\":\"\",\"list\":[],\"nextPageCursor\":\"\"},\"retExtInfo\":{},\"time\":1679394261861}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "137",
+        "Connection": "keep-alive",
+        "Date": "Tue, 21 Mar 2023 10:24:21 GMT",
+        "Ret_code": "10001",
+        "Cache-Control": "no-store",
+        "Traceid": "758c5fa4551256f668d23ed46f01f9aa",
+        "Timenow": "1679394261861",
+        "Server": "Openresty",
+        "X-Cache": "Miss from cloudfront",
+        "Via": "1.1 3576e59a290d96db1fe4f3fc4ce2e3d8.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "NRT57-C3",
+        "X-Amz-Cf-Id": "4GJosZxICIDtAxi78DiMNEtEiXZ4QSFEUV4z4MvhuSY0cZbctC24Ew=="
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "X-BAPI-SIGN-TYPE": "2",
+        "X-BAPI-SIGN": "18FC24E1A7F2F2BBD584E25575A00E1FD4D5D04F5F0CFCD1D38870063B88C78D",
+        "X-BAPI-API-KEY": "Y3lu1AzabYCcVBa1vs",
+        "X-BAPI-TIMESTAMP": "1679394259009",
+        "X-BAPI-RECV-WINDOW": "5000",
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/v5/position/list?category=linear&symbol=ETHUSDT"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"nextPageCursor\":\"\",\"category\":\"linear\",\"list\":[{\"symbol\":\"ETHUSDT\",\"leverage\":\"10\",\"updatedTime\":\"\",\"side\":\"None\",\"bustPrice\":\"\",\"activePrice\":\"\",\"avgPrice\":\"\",\"liqPrice\":\"\",\"riskLimitValue\":\"900000\",\"takeProfit\":\"\",\"positionValue\":\"\",\"tpslMode\":\"\",\"riskId\":11,\"trailingStop\":\"\",\"unrealisedPnl\":\"\",\"markPrice\":\"\",\"size\":\"0\",\"stopLoss\":\"\",\"cumRealisedPnl\":\"\",\"positionMM\":\"\",\"createdTime\":\"\",\"positionIdx\":0,\"tradeMode\":0,\"positionIM\":\"\"}]},\"retExtInfo\":{},\"time\":1679394259237}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "515",
+        "Connection": "keep-alive",
+        "Date": "Tue, 21 Mar 2023 10:24:19 GMT",
+        "Ret_code": "0",
+        "Traceid": "5f2b411a150d78f97ecbff8ca573c982",
+        "Timenow": "1679394259237",
+        "Server": "Openresty",
+        "X-Cache": "Miss from cloudfront",
+        "Via": "1.1 3576e59a290d96db1fe4f3fc4ce2e3d8.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "NRT57-C3",
+        "X-Amz-Cf-Id": "1v8M-2Zlio7YNeccuwTaVVpxyfShTlUtXMHQFhMgwNwsH4Zj_N5QSQ=="
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

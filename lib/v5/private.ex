@@ -1,6 +1,6 @@
-defmodule Bybit.Unified.Private do
+defmodule Bybit.V5.Private do
   @moduledoc """
-  Unified contract client.
+  V5 contract client.
   """
 
   import Bybit.Api.Private
@@ -16,7 +16,7 @@ defmodule Bybit.Unified.Private do
 
   ## Examples
 
-  iex> Bybit.Unified.Private.create_order(%{
+  iex> Bybit.V5.Private.create_order(%{
     "symbol": "BTCUSDT",
     "orderType": "Limit",
     "side": "Buy",
@@ -41,7 +41,7 @@ defmodule Bybit.Unified.Private do
   end
 
   @doc """
-  Bybit.Unified.Private.get_open_orders(%{symbol: "ETHUSDT", "category": "linear"})
+  Bybit.V5.Private.get_open_orders(%{symbol: "ETHUSDT", "category": "linear"})
 
   {:ok,
    %{
@@ -92,7 +92,7 @@ defmodule Bybit.Unified.Private do
 
   @doc """
   Replace an order
-  Bybit.Unified.Private.replace_order(%{orderId: "4c51a45f-7795-4b38-9b66-3c306b73f112", "symbol": "BTCUSDT", "category": "linear", "price": "35000"})
+  Bybit.V5.Private.replace_order(%{orderId: "4c51a45f-7795-4b38-9b66-3c306b73f112", "symbol": "BTCUSDT", "category": "linear", "price": "35000"})
 
   {:ok,
    %{
@@ -111,7 +111,7 @@ defmodule Bybit.Unified.Private do
 
   @doc """
   Cancel an order
-  Bybit.Unified.Private.cancel_order(%{orderId: "4c51a45f-7795-4b38-9b66-3c306b73f112", "symbol": "BTCUSDT", "category": "linear"})
+  Bybit.V5.Private.cancel_order(%{orderId: "4c51a45f-7795-4b38-9b66-3c306b73f112", "symbol": "BTCUSDT", "category": "linear"})
 
   {:ok,
    %{
@@ -132,7 +132,7 @@ defmodule Bybit.Unified.Private do
 
   @doc """
   Cancel all active orders
-  Bybit.Unified.Private.cancel_all_orders(%{"category": "option"})
+  Bybit.V5.Private.cancel_all_orders(%{"category": "option"})
 
   {:ok,
     %{
@@ -172,7 +172,7 @@ defmodule Bybit.Unified.Private do
 
   Examples:
 
-  Bybit.Unified.Private.get_account()
+  Bybit.V5.Private.get_account("UNIFIED")
 
   {:ok,
   %{
@@ -233,8 +233,8 @@ defmodule Bybit.Unified.Private do
     "time"=> 1673266182240
   }}
   """
-  def get_account() do
-    get("#{@prefix}/account/wallet-balance")
+  def get_account(params) do
+    get("#{@prefix}/account/wallet-balance", params)
   end
 
   @doc """
@@ -242,7 +242,7 @@ defmodule Bybit.Unified.Private do
 
   Examples:
 
-  Bybit.Unified.Private.get_my_trades(%{symbol: "ETHUSDT", category: "linear"})
+  Bybit.V5.Private.get_my_trades(%{symbol: "ETHUSDT", category: "linear"})
 
   {:ok,
   %{
