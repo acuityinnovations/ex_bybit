@@ -1,0 +1,80 @@
+[
+  {
+    "request": {
+      "body": "{\"category\":\"linear\",\"orderType\":\"Limit\",\"price\":\"17000\",\"qty\":\"0.01\",\"side\":\"Buy\",\"symbol\":\"BTCUSDT\",\"timeInForce\":\"GoodTillCancel\"}",
+      "headers": {
+        "X-BAPI-SIGN-TYPE": "2",
+        "X-BAPI-SIGN": "2195325CC4F59D05802CBE36DBE751494D0D310FC01B0B085152A45ACF11ED76",
+        "X-BAPI-API-KEY": "zyRsbV5SUmFForZck6",
+        "X-BAPI-TIMESTAMP": "1673447564752",
+        "X-BAPI-RECV-WINDOW": "5000",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/unified/v3/private/order/create"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"orderId\":\"ae1e659b-875f-4d9a-93c7-13b2a537da76\",\"orderLinkId\":\"\"},\"retExtInfo\":{},\"time\":1673447564979}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "141",
+        "X-Bapi-Limit": "10",
+        "X-Bapi-Limit-Status": "9",
+        "X-Bapi-Limit-Reset-Timestamp": "1673447564972",
+        "Ret_code": "0",
+        "Traceid": "4c9541140e5d71d101dfcacc05b2ea53",
+        "Timenow": "1673447564979",
+        "Server": "Openresty",
+        "Expires": "Wed, 11 Jan 2023 14:32:44 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Wed, 11 Jan 2023 14:32:44 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "{\"category\":\"linear\",\"symbol\":\"BTCUSDT\"}",
+      "headers": {
+        "X-BAPI-SIGN-TYPE": "2",
+        "X-BAPI-SIGN": "FFDB5A6D24358CA1B1F1429DB0715FC1595F40D51D6B960EA4ABBCD7F2E7D16E",
+        "X-BAPI-API-KEY": "zyRsbV5SUmFForZck6",
+        "X-BAPI-TIMESTAMP": "1673447564981",
+        "X-BAPI-RECV-WINDOW": "5000",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/unified/v3/private/order/cancel-all"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"list\":[{\"category\":\"linear\",\"symbol\":\"BTCUSDT\",\"orderId\":\"ae1e659b-875f-4d9a-93c7-13b2a537da76\",\"orderLinkId\":\"\"},{\"category\":\"linear\",\"symbol\":\"BTCUSDT\",\"orderId\":\"a28e9c8c-ae37-42d9-8c05-cea4d284f960\",\"orderLinkId\":\"\"}]},\"retExtInfo\":{\"list\":[{\"code\":0,\"msg\":\"success\"},{\"code\":0,\"msg\":\"success\"}]},\"time\":1673447565060}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "360",
+        "X-Bapi-Limit": "5",
+        "X-Bapi-Limit-Status": "4",
+        "X-Bapi-Limit-Reset-Timestamp": "1673447565054",
+        "Ret_code": "0",
+        "Traceid": "67df7a8b7dc4d7045a90db62caf207db",
+        "Timenow": "1673447565060",
+        "Server": "Openresty",
+        "Expires": "Wed, 11 Jan 2023 14:32:45 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Wed, 11 Jan 2023 14:32:45 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

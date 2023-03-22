@@ -1,0 +1,38 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "X-BAPI-SIGN-TYPE": "2",
+        "X-BAPI-SIGN": "5540B047207AB7557DE12436F2103F12418E80B1C1DF94822ECB6CC8A04F45B8",
+        "X-BAPI-API-KEY": "zyRsbV5SUmFForZck6",
+        "X-BAPI-TIMESTAMP": "1673447565366",
+        "X-BAPI-RECV-WINDOW": "5000",
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/unified/v3/private/account/wallet/balance"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"totalEquity\":\"114139.13875626\",\"accountIMRate\":\"0.0005\",\"totalMarginBalance\":\"114139.13875626\",\"totalInitialMargin\":\"52.08627861\",\"totalAvailableBalance\":\"114087.05247765\",\"accountMMRate\":\"0.0000\",\"totalPerpUPL\":\"3.47898549\",\"totalWalletBalance\":\"114135.65977076\",\"totalMaintenanceMargin\":\"2.87008140\",\"coin\":[{\"currencyCoin\":\"USDC\",\"availableToBorrow\":\"1500000\",\"borrowSize\":\"0\",\"bonus\":\"\",\"accruedInterest\":\"0\",\"availableBalanceWithoutConvert\":\"50000\",\"totalOrderIM\":\"0\",\"equity\":\"50000\",\"totalPositionMM\":\"0\",\"usdValue\":\"50000\",\"availableBalance\":\"114087.05247765\",\"unrealisedPnl\":\"\",\"totalPositionIM\":\"0\",\"marginBalanceWithoutConvert\":\"50000\",\"walletBalance\":\"50000\",\"cumRealisedPnl\":\"\",\"marginBalance\":\"114139.13875626\"},{\"currencyCoin\":\"BTC\",\"availableToBorrow\":\"0.00000000\",\"borrowSize\":\"0.00000000\",\"bonus\":\"\",\"accruedInterest\":\"0\",\"availableBalanceWithoutConvert\":\"2.21212885\",\"totalOrderIM\":\"\",\"equity\":\"2.21212885\",\"totalPositionMM\":\"\",\"usdValue\":\"36538.41375384\",\"availableBalance\":\"6.56176536\",\"unrealisedPnl\":\"\",\"totalPositionIM\":\"\",\"marginBalanceWithoutConvert\":\"2.21212885\",\"walletBalance\":\"2.21212885\",\"cumRealisedPnl\":\"\",\"marginBalance\":\"6.67536757\"},{\"currencyCoin\":\"ETH\",\"availableToBorrow\":\"0.00000000\",\"borrowSize\":\"0.00000000\",\"bonus\":\"\",\"accruedInterest\":\"0\",\"availableBalanceWithoutConvert\":\"12.45316\",\"totalOrderIM\":\"\",\"equity\":\"12.45316\",\"totalPositionMM\":\"\",\"usdValue\":\"15746.72651095\",\"availableBalance\":\"85.71350379\",\"unrealisedPnl\":\"\",\"totalPositionIM\":\"\",\"marginBalanceWithoutConvert\":\"12.45316\",\"walletBalance\":\"12.45316\",\"cumRealisedPnl\":\"\",\"marginBalance\":\"86.37529416\"},{\"currencyCoin\":\"EOS\",\"availableToBorrow\":\"0.00000000\",\"borrowSize\":\"0.00000000\",\"bonus\":\"\",\"accruedInterest\":\"\",\"availableBalanceWithoutConvert\":\"2000\",\"totalOrderIM\":\"\",\"equity\":\"2000\",\"totalPositionMM\":\"\",\"usdValue\":\"1603.085261\",\"availableBalance\":\"120984.20085968\",\"unrealisedPnl\":\"\",\"totalPositionIM\":\"\",\"marginBalanceWithoutConvert\":\"2000\",\"walletBalance\":\"2000\",\"cumRealisedPnl\":\"\",\"marginBalance\":\"121339.43602139\"},{\"currencyCoin\":\"XRP\",\"availableToBorrow\":\"0.00000000\",\"borrowSize\":\"0.00000000\",\"bonus\":\"\",\"accruedInterest\":\"\",\"availableBalanceWithoutConvert\":\"10000\",\"totalOrderIM\":\"\",\"equity\":\"10000\",\"totalPositionMM\":\"\",\"usdValue\":\"3138.17118499\",\"availableBalance\":\"309014.35546133\",\"unrealisedPnl\":\"\",\"totalPositionIM\":\"\",\"marginBalanceWithoutConvert\":\"10000\",\"walletBalance\":\"10000\",\"cumRealisedPnl\":\"\",\"marginBalance\":\"310655.43551784\"},{\"currencyCoin\":\"USDT\",\"availableToBorrow\":\"2500000\",\"borrowSize\":\"0\",\"bonus\":\"\",\"accruedInterest\":\"0\",\"availableBalanceWithoutConvert\":\"7096.46347666\",\"totalOrderIM\":\"0\",\"equity\":\"7148.55023446\",\"totalPositionMM\":\"2.8701078\",\"usdValue\":\"7112.74204545\",\"availableBalance\":\"114088.10208819\",\"unrealisedPnl\":\"3.49650000\",\"totalPositionIM\":\"52.0867578\",\"marginBalanceWithoutConvert\":\"7148.55023446\",\"walletBalance\":\"7145.05373446\",\"cumRealisedPnl\":\"-0.46746348\",\"marginBalance\":\"114175.93159717\"}]},\"retExtInfo\":{},\"time\":1673447565503}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "3033",
+        "Ret_code": "0",
+        "Traceid": "142c8b5dd55c0a682d7de7c530e0e676",
+        "Timenow": "1673447565503",
+        "Server": "Openresty",
+        "Expires": "Wed, 11 Jan 2023 14:32:45 GMT",
+        "Cache-Control": "max-age=0, no-cache, no-store",
+        "Pragma": "no-cache",
+        "Date": "Wed, 11 Jan 2023 14:32:45 GMT",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
