@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/v5/market/tickers?category=linear&symbol=BTCUSDT"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"category\":\"linear\",\"list\":[{\"symbol\":\"BTCUSDT\",\"lastPrice\":\"28137.60\",\"indexPrice\":\"28136.57\",\"markPrice\":\"28137.05\",\"prevPrice24h\":\"28064.30\",\"price24hPcnt\":\"0.002611\",\"highPrice24h\":\"34000.00\",\"lowPrice24h\":\"18001.00\",\"prevPrice1h\":\"27651.30\",\"openInterest\":\"68868.434\",\"openInterestValue\":\"1937754570.88\",\"turnover24h\":\"19277202309.2729\",\"volume24h\":\"694329.4690\",\"fundingRate\":\"-0.00375\",\"nextFundingTime\":\"1679414400000\",\"predictedDeliveryPrice\":\"\",\"basisRate\":\"\",\"deliveryFeeRate\":\"\",\"deliveryTime\":\"0\",\"ask1Size\":\"18.231\",\"bid1Price\":\"28136.90\",\"ask1Price\":\"28137.50\",\"bid1Size\":\"0.002\",\"basis\":\"\"}]},\"retExtInfo\":{},\"time\":1679394262388}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "683",
+        "Connection": "keep-alive",
+        "Date": "Tue, 21 Mar 2023 10:24:22 GMT",
+        "Ret_code": "0",
+        "Traceid": "5c2e322e7c7f5e9b59843683818e54ac",
+        "Timenow": "1679394262388",
+        "Server": "Openresty",
+        "X-Cache": "Miss from cloudfront",
+        "Via": "1.1 3576e59a290d96db1fe4f3fc4ce2e3d8.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "NRT57-C3",
+        "X-Amz-Cf-Id": "wu1lSa4H7MeSZVhmPGtNziKUvVEjjuE_JpHuh3iABrtT-9CFoNyChg=="
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -7,6 +7,7 @@ defmodule Bybit.Auth do
 
   def post_sign(timestamp, body, api_key, api_secret) do
     payload_to_sign = "#{timestamp}#{api_key}5000#{Jason.encode!(body)}"
+
     if Code.ensure_loaded?(:crypto) and function_exported?(:crypto, :mac, 4) do
       :hmac
       |> :crypto.mac(:sha256, api_secret, payload_to_sign)
@@ -19,7 +20,8 @@ defmodule Bybit.Auth do
   end
 
   def get_sign(timestamp, params, api_key, api_secret) do
-    payload_to_sign = "#{timestamp}#{api_key}5000#{params|> URI.encode_query()}"
+    payload_to_sign = "#{timestamp}#{api_key}5000#{params |> URI.encode_query()}"
+
     if Code.ensure_loaded?(:crypto) and function_exported?(:crypto, :mac, 4) do
       :hmac
       |> :crypto.mac(:sha256, api_secret, payload_to_sign)

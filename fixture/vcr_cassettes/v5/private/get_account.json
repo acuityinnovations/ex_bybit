@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "X-BAPI-SIGN-TYPE": "2",
+        "X-BAPI-SIGN": "1A75C2BDEFF2F1B3B37CCA21967893A80C447D010DF2400F3BA737DD7598D618",
+        "X-BAPI-API-KEY": "Y3lu1AzabYCcVBa1vs",
+        "X-BAPI-TIMESTAMP": "1679394255052",
+        "X-BAPI-RECV-WINDOW": "5000",
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api-testnet.bybit.com/v5/account/wallet-balance?accountType=UNIFIED"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"list\":[{\"totalEquity\":\"122716.13481081\",\"accountIMRate\":\"0.0001\",\"totalMarginBalance\":\"122716.13481081\",\"totalInitialMargin\":\"18.01682321\",\"accountType\":\"UNIFIED\",\"totalAvailableBalance\":\"122698.11798759\",\"accountMMRate\":\"0\",\"totalPerpUPL\":\"46.68521991\",\"totalWalletBalance\":\"122669.4495909\",\"accountLTV\":\"0\",\"totalMaintenanceMargin\":\"0.99277104\",\"coin\":[{\"availableToBorrow\":\"1500000\",\"bonus\":\"0\",\"accruedInterest\":\"0\",\"availableToWithdraw\":\"50000\",\"totalOrderIM\":\"0\",\"equity\":\"50000\",\"totalPositionMM\":\"0\",\"usdValue\":\"50000.355\",\"unrealisedPnl\":\"0\",\"borrowAmount\":\"0.0\",\"totalPositionIM\":\"0\",\"walletBalance\":\"50000\",\"cumRealisedPnl\":\"0\",\"coin\":\"USDC\"},{\"availableToBorrow\":\"3\",\"bonus\":\"0\",\"accruedInterest\":\"0\",\"availableToWithdraw\":\"0.00000022\",\"totalOrderIM\":\"0\",\"equity\":\"0.00000022\",\"totalPositionMM\":\"0\",\"usdValue\":\"0.00598043\",\"unrealisedPnl\":\"0\",\"borrowAmount\":\"0.0\",\"totalPositionIM\":\"0\",\"walletBalance\":\"0.00000022\",\"cumRealisedPnl\":\"0\",\"coin\":\"BTC\"},{\"availableToBorrow\":\"26\",\"bonus\":\"0\",\"accruedInterest\":\"0\",\"availableToWithdraw\":\"12.45316\",\"totalOrderIM\":\"0\",\"equity\":\"12.45316\",\"totalPositionMM\":\"0\",\"usdValue\":\"20936.78953049\",\"unrealisedPnl\":\"0\",\"borrowAmount\":\"0.0\",\"totalPositionIM\":\"0\",\"walletBalance\":\"12.45316\",\"cumRealisedPnl\":\"0\",\"coin\":\"ETH\"},{\"availableToBorrow\":\"0\",\"bonus\":\"0\",\"accruedInterest\":\"\",\"availableToWithdraw\":\"2000\",\"totalOrderIM\":\"0\",\"equity\":\"2000\",\"totalPositionMM\":\"0\",\"usdValue\":\"1973.62428199\",\"unrealisedPnl\":\"0\",\"borrowAmount\":\"0.0\",\"totalPositionIM\":\"0\",\"walletBalance\":\"2000\",\"cumRealisedPnl\":\"0\",\"coin\":\"EOS\"},{\"availableToBorrow\":\"10701\",\"bonus\":\"0\",\"accruedInterest\":\"0\",\"availableToWithdraw\":\"10000\",\"totalOrderIM\":\"0\",\"equity\":\"10000\",\"totalPositionMM\":\"0\",\"usdValue\":\"3310.127885\",\"unrealisedPnl\":\"0\",\"borrowAmount\":\"0.0\",\"totalPositionIM\":\"0\",\"walletBalance\":\"10000\",\"cumRealisedPnl\":\"0\",\"coin\":\"XRP\"},{\"availableToBorrow\":\"2500000\",\"bonus\":\"0\",\"accruedInterest\":\"0\",\"availableToWithdraw\":\"46272.33792264\",\"totalOrderIM\":\"0\",\"equity\":\"46336.81952124\",\"totalPositionMM\":\"0.9893886\",\"usdValue\":\"46495.23213288\",\"unrealisedPnl\":\"46.52616\",\"borrowAmount\":\"0.0\",\"totalPositionIM\":\"17.9554386\",\"walletBalance\":\"46290.29336124\",\"cumRealisedPnl\":\"100.26455959\",\"coin\":\"USDT\"}]}]},\"retExtInfo\":{},\"time\":1679394255880}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "2304",
+        "Connection": "keep-alive",
+        "Vary": "Accept-Encoding",
+        "Date": "Tue, 21 Mar 2023 10:24:15 GMT",
+        "Ret_code": "0",
+        "Traceid": "3195aca599bc2454250218d7c50a2935",
+        "Timenow": "1679394255880",
+        "Server": "Openresty",
+        "X-Cache": "Miss from cloudfront",
+        "Via": "1.1 3576e59a290d96db1fe4f3fc4ce2e3d8.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Pop": "NRT57-C3",
+        "X-Amz-Cf-Id": "QpX2YUprKcSD2W-NRf-dCWciif5MbAE1OKpFpfDWetyPHjSf0y5G5Q=="
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
